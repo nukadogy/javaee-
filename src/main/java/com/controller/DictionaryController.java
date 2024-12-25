@@ -1,20 +1,27 @@
 package com.controller;
 
-import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.baomidou.mybatisplus.mapper.Wrapper;
-import com.entity.DictionaryEntity;
-import com.service.DictionaryService;
-import com.utils.PageUtils;
-import com.utils.R;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.mapper.Wrapper;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.Arrays;
-import java.util.Map;
+import com.entity.DictionaryEntity;
+
+import com.service.DictionaryService;
+import com.utils.PageUtils;
+import com.utils.R;
 
 /**
  * 字典表

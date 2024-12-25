@@ -8,18 +8,18 @@ import org.springframework.transaction.annotation.Transactional;
 import com.utils.PageUtils;
 import com.utils.Query;
 
-import com.dao.DictionaryDao;
-import com.entity.DictionaryEntity;
-import com.service.DictionaryService;
-import com.entity.view.DictionaryView;
+import com.dao.CanzhuoDao;
+import com.entity.CanzhuoEntity;
+import com.service.CanzhuoService;
+import com.entity.view.CanzhuoView;
 
 /**
- * 字典表 服务实现类
+ * 餐桌表 服务实现类
  * @since 2021-03-08
  */
-@Service("dictionaryService")
+@Service("canzhuoService")
 @Transactional
-public class DictionaryServiceImpl extends ServiceImpl<DictionaryDao, DictionaryEntity> implements DictionaryService {
+public class CanzhuoServiceImpl extends ServiceImpl<CanzhuoDao, CanzhuoEntity> implements CanzhuoService {
 
     @Override
     public PageUtils queryPage(Map<String,Object> params) {
@@ -27,7 +27,7 @@ public class DictionaryServiceImpl extends ServiceImpl<DictionaryDao, Dictionary
             params.put("page","1");
             params.put("limit","10");
         }
-        Page<DictionaryView> page =new Query<DictionaryView>(params).getPage();
+        Page<CanzhuoView> page =new Query<CanzhuoView>(params).getPage();
         page.setRecords(baseMapper.selectListView(page,params));
         return new PageUtils(page);
     }

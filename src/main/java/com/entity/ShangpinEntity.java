@@ -1,13 +1,15 @@
 package com.entity;
 
-import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
-import com.baomidou.mybatisplus.enums.IdType;
-import org.apache.commons.beanutils.BeanUtils;
+
+import java.lang.reflect.InvocationTargetException;
 
 import java.io.Serializable;
-import java.lang.reflect.InvocationTargetException;
+
+import org.apache.commons.beanutils.BeanUtils;
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.enums.IdType;
 
 /**
  * 商品表

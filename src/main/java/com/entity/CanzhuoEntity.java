@@ -21,21 +21,21 @@ import com.baomidou.mybatisplus.enums.FieldFill;
 import com.baomidou.mybatisplus.enums.IdType;
 
 /**
- * 订单详情
+ * 餐桌表
  *
  * @email
- * @date 2021-03-09
+ * @date 2021-03-08
  */
-@TableName("dingdanxiangqing")
-public class DingdanxiangqingEntity<T> implements Serializable {
+@TableName("canzhuo")
+public class CanzhuoEntity<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
 
-    public DingdanxiangqingEntity() {
+    public CanzhuoEntity() {
 
     }
 
-    public DingdanxiangqingEntity(T t) {
+    public CanzhuoEntity(T t) {
     try {
     BeanUtils.copyProperties(this, t);
     } catch (IllegalAccessException | InvocationTargetException e) {
@@ -55,35 +55,27 @@ public class DingdanxiangqingEntity<T> implements Serializable {
 
 
     /**
-     * 订单号
+     * 餐桌名称
      */
-    @TableField(value = "odd")
+    @TableField(value = "name")
 
-    private String odd;
+    private String name;
 
 
     /**
-     * 商品名称
+     * 餐桌位置
      */
-    @TableField(value = "hx_types")
+    @TableField(value = "tableLocation")
 
-    private Integer hxTypes;
+    private String tableLocation;
 
 
     /**
-     * 数量
+     * 是否预定
      */
-    @TableField(value = "number")
+    @TableField(value = "sf_types")
 
-    private Integer number;
-
-
-    /**
-     * 单价
-     */
-    @TableField(value = "money")
-
-    private Double money;
+    private Integer sfTypes;
 
 
     /**
@@ -102,74 +94,58 @@ public class DingdanxiangqingEntity<T> implements Serializable {
         this.id = id;
     }
     /**
-	 * 设置：订单号
+	 * 设置：餐桌名称
 	 */
-    public String getOdd() {
-        return odd;
+    public String getName() {
+        return name;
     }
 
 
     /**
-	 * 获取：订单号
+	 * 获取：餐桌名称
 	 */
 
-    public void setOdd(String odd) {
-        this.odd = odd;
+    public void setName(String name) {
+        this.name = name;
     }
     /**
-	 * 设置：商品名称
+	 * 设置：餐桌位置
 	 */
-    public Integer getHxTypes() {
-        return hxTypes;
-    }
-
-
-    /**
-	 * 获取：商品名称
-	 */
-
-    public void setHxTypes(Integer hxTypes) {
-        this.hxTypes = hxTypes;
-    }
-    /**
-	 * 设置：数量
-	 */
-    public Integer getNumber() {
-        return number;
+    public String getTableLocation() {
+        return tableLocation;
     }
 
 
     /**
-	 * 获取：数量
+	 * 获取：餐桌位置
 	 */
 
-    public void setNumber(Integer number) {
-        this.number = number;
+    public void setTableLocation(String tableLocation) {
+        this.tableLocation = tableLocation;
     }
     /**
-	 * 设置：单价
+	 * 设置：是否预定
 	 */
-    public Double getMoney() {
-        return money;
+    public Integer getSfTypes() {
+        return sfTypes;
     }
 
 
     /**
-	 * 获取：单价
+	 * 获取：是否预定
 	 */
 
-    public void setMoney(Double money) {
-        this.money = money;
+    public void setSfTypes(Integer sfTypes) {
+        this.sfTypes = sfTypes;
     }
 
     @Override
     public String toString() {
-    return "Dingdanxiangqing{" +
+    return "Canzhuo{" +
             "id=" + id +
-            ", odd=" + odd +
-            ", hxTypes=" + hxTypes +
-            ", number=" + number +
-            ", money=" + money +
+            ", name=" + name +
+            ", tableLocation=" + tableLocation +
+            ", sfTypes=" + sfTypes +
     "}";
     }
     }

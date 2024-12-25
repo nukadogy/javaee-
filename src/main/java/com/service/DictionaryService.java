@@ -1,9 +1,8 @@
 package com.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.entity.DictionaryEntity;
 import com.utils.PageUtils;
-
+import com.entity.DictionaryEntity;
 import java.util.Map;
 
 /**
