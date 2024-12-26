@@ -4,7 +4,7 @@
 <html>
 
 <head>
-	<title>御膳房智能点餐管家</title>
+	<title>快餐店点餐服务系统</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,7 @@
                                 <div class="logo">
                                     <h1>欢迎登录</h1>
                                 </div>
-                                <p>御膳房智能点餐管家</p>
+                                <p>快餐店点餐服务系统</p>
                             </div>
                         </div>
                     </div>

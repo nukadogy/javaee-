@@ -41,6 +41,9 @@
 		}
 	}
 	$('#side-menu').append(menusHtml);
+	if(role == '用户'){
+		$('#side-menu').append('<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#app_dr1"><div class="pull-left"><i class="zmdi zmdi-apps mr-20"></i><span class="right-nav-text">菜品推荐</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a><ul id="app_dr1" class="collapse collapse-level-1"><li><a href="' + baseUrl + 'jsp/modules/shangpin/recommend.jsp" onclick="navClick(this);return false;">菜品推荐</a></li></ul></li>');
+	}
 	if(hasMessage != null && hasMessage == '是' && role == '管理员'){
 		$('#side-menu').append('<li><a href="javascript:void(0);" data-toggle="collapse" data-target="#app_dr1"><div class="pull-left"><i class="zmdi zmdi-apps mr-20"></i><span class="right-nav-text">留言管理</span></div><div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div></a><ul id="app_dr1" class="collapse collapse-level-1"><li><a href="' + baseUrl + 'jsp/modules/messages/list.jsp" onclick="navClick(this);return false;">留言列表</a></li></ul></li>');
 	}
