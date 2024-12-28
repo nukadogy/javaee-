@@ -316,6 +316,17 @@
         detailBtn.setAttribute("onclick", detailAttr);
         detailBtn.innerHTML = "查看订单详情"
         btnGroup.appendChild(detailBtn)
+
+        if (item.sfTypes == 2) {
+            var detailBtn = document.createElement('button');
+            var detailAttr = 'gaiwei(' + item.id + '); window.location.href="/kuaichandian/jsp/pay.jsp?id=' + item.id + '"'; // 使用绝对路径
+            detailBtn.setAttribute("type", "button");
+            detailBtn.setAttribute("class", "btn btn-info btn-sm 查看");
+            detailBtn.setAttribute("onclick", detailAttr);
+            detailBtn.innerHTML = "支付"; // 按钮文本设置为“支付”
+            btnGroup.appendChild(detailBtn);
+        }
+
         //修改按钮
        if(item.sfTypes == 2){
            var editBtn = document.createElement('button');
